@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿨롱쿨롱</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+        .section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+            position: relative;
+        }
+        .line {
+            width: 100%;
+            border: none;
+            border-top: 2px dashed black;
+        }
+        .bold {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        .description {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .image-grid {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin-top: 20px;
+        }
+        .image-grid div {
+            flex: 1;
+            height: 150px;
+            background-color: lightgray;
+            margin: 0 10px;
+        }
+        .photo-box {
+            width: 80%;
+            height: 150px;
+            background-color: lightgray;
+            margin-bottom: 10px;
+        }
+        .content-row {
+            display: flex;
+            width: 80%;
+            margin-top: 20px;
+        }
+        .content-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+        }
+        .content-column .description {
+            margin-top: 10px;
+        }
+        .spacer {
+            height: 30px; /* 간격을 줄이기 위해 조정 */
+        }
+    </style>
+</head>
+<body>
+    <!-- First Screen -->
+    <div class="section">
+        <div class="bold">쿨롱법칙이란?</div>
+        <div class="description">두 전하 사이에서 작용하는 힘은 두 전하의 크기의 곱에 비례하고 거리의 제곱에 반비례한다.</div>
+        <hr class="line">
+        <div class="bold">쿨롱쿨롱을 만든 이유</div>
+        <div class="image-grid">
+            <div><img src="스크린샷 2025-01-02 013039.png" style="width: 100%; height:100%; object-fit: cover;"></div>
+            <div><img src="스크린샷 2025-01-02 013056.png"style="width: 100%; height:100%; object-fit: cover;"></div>
+            <div><img src="스크린샷 2025-01-02 013122.png"style="width: 100%; height:100%; object-fit: cover;"></div>
+            <div><img src="스크린샷 2025-01-02 013139.png"style="width: 100%; height:100%; object-fit: cover;"></div>
+            <div><img src="스크린샷 2025-01-02 013154.png"style="width: 100%; height:100%; object-fit: cover;"></div>
+        </div>
+        <hr class="line" style="margin-top: 30px;"> <!-- 추가된 점선 -->
+    </div>
+
+    <!-- Second Screen -->
+<div class="section">
+    <div class="bold">문제 유형과 풀이법</div>
+    <div class="content-row">
+        <!-- 첫 번째 사진과 설명 -->
+        <div class="content-column">
+            <img src="스크린샷 2025-01-02 020044.png"  style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="description">전기력의 크기가 0이 되는 지점을 알려줄 때</div>
+        </div>
+        <div class="content-column">
+            <div class="description">전기력의 크기가 0이 되는 지점은 다른 전하들의 부호를 알 수 있는 힌트다. 전하가 3개이고 현재 특정 점전하에 가해지는 전기력이 0이라는 가정을 해보자. 만약 점전하가 전하 a, b 사이에 있다면 전하 a, b의 부호는 같고 점전하가 전하 a, b 사이에 있지 않다면 전하 a, b의 부호는 다르다. 이 점을 이용해서 예제에서 a, b, c의 부호를 구할 수 있다. 이때 전하 a, b 가 양전하로 동일한지, 음전하로 동일한지 알고 싶으면 전기력이 0이 아닐 때 어느 전하와 더 가까운지를 알면 된다. 그리고 전하의 크기를 비교할 때는 전하가 0이 되는 지점에서 각각 전하값의 절댓값이 같다고 두어서 문제를 해결할 수 있다.</div>
+        </div>
+    </div>
+    <div class="content-row">
+        <!-- 두 번째 사진과 설명 -->
+        <div class="content-column">
+            <img src="스크린샷 2025-01-02 020024.png"  style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="description">어떤 힘을 F라고 가정할 때</div>
+        </div>
+        <div class="content-column">
+            <div class="description">특정 상황에서 특정 전하에 작용되는 힘을 F라고 줄 때는 그 때 작용하는 힘들을 구해서 F를 연립방정식으로 나타낸다. 이때 작용반작용 법칙에 따라 a가 b에 작용하는 전기력과 b가 a에 작용하는 전기력은 같으므로 같은 문자로 표현한다. 그리고 절댓값으로 생각해서 문제를 푸는 것이 좋다. 그리고 주의할 점은 내가 전하 a와 전하 b 에 작용하는 전기력을 f1 이라고 두었어도 만약 두 전하 중 하나의 위치가 바뀌면 f1도 바뀐다. 이때 전하량은 동일하므로 f1을 이용해 다르게 표현하는 것이 좋다. 만약 a와 b 의 거리가 d였다가 3d가 되면 1/9f1 이라고 표현할 수 있다. 그렇게 구할 전기력도 미지수를 이용해 나타내고 연립방정식으로 미지수를 구해서 대입해 F로 나타낸다.</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

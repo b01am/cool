@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿨롱쿨롱</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        /* 공통 스타일 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Fredoka One', cursive; /* 피오피 버블체 느낌 폰트 */
+        }
+
+        /* 첫 번째 화면 */
+        .background {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('스크린샷 2024-12-27 112406.png'); /* 배경 이미지 링크 추가 */
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        /* 두 번째 화면 */
+        .page {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 중앙 상단 텍스트 */
+        .title {
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            text-align: center;
+            font-size: 5rem; /* 크기를 키움 */
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* 글자 간 간격 */
+        }
+
+        /* 각 글자의 색상 */
+        .title span {
+            display: inline-block;
+        }
+
+        .title .cool1 { color: #90ee90; } /* 연두색 */
+        .title .long1 { color: #ff69b4; } /* 분홍색 */
+        .title .cool2 { color: #ffd700; } /* 샛노란색 */
+        .title .long2 { color: #dda0dd; } /* 연보라색 */
+        .title .wave { color: #ffa500; } /* 주황색 */
+
+        /* 버튼 스타일 */
+        .buttons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* 버튼 간 간격 */
+        }
+
+        button {
+            width: 200px;
+            height: 90px;
+            font-size: 1.8rem;
+            font-family: 'Fredoka One', cursive; /* 버튼 글씨체도 Fredoka One */
+            border: none;
+            border-radius: 50px; /* 둥근 버튼 */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* 버튼 색상 */
+        .btn-a {
+            background-color: #add8e6; /* 파스텔 하늘색 */
+        }
+
+        .btn-b {
+            background-color: #f5a3a3; /* 파스텔 빨간색 */
+        }
+
+        /* 호버 효과 */
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- 첫 번째 화면 -->
+    <div class="background" id="page1"></div>
+
+    <!-- 두 번째 화면 -->
+    <div class="page" id="page2">
+        <audio id="bgm" loop>
+            <source src="assets/bgm/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- 중앙 상단 텍스트 -->
+        <div class="title">
+            <span class="cool1">1</span>
+            <span class="long1">6</span>
+            <span class="cool2">+</span>
+            <span class="long2">1</span>
+            <span class="wave">~</span>
+        </div>
+
+        <!-- 좌우 버튼 -->
+        <div class="buttons">
+            <button class="btn-a" onclick="navigateTo('A.html')">쿨</button>
+            <button class="btn-b" onclick="navigateTo('B.html')">롱</button>
+        </div>
+    </div>
+
+    <script>
+        // 페이지 전환 스크립트
+        const page1 = document.getElementById('page1');
+        const page2 = document.getElementById('page2');
+        const bgm = document.getElementById('bgm');
+
+        page1.addEventListener('click', () => {
+            page1.style.display = 'none';
+            page2.style.display = 'flex';
+            bgm.play();
+        });
+
+        function navigateTo(link) {
+            window.location.href = link; // A.html 또는 B.html로 이동
+        }
+    </script>
+</body>
+</html>

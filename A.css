@@ -1,0 +1,75 @@
+.hidden {
+    display: none;
+  }
+  
+  #chargeArea {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    background-color: #f4f4f4;
+  }
+  
+  #horizontalLine {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    left: 0;
+  }
+  
+  .marker {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    text-align: center;
+    color: black;
+  }
+  
+  .charge {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  #chargeModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  #forceArea {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid red;
+    transform-origin: 50% 100%;
+  }
+  

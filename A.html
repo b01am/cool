@@ -1,0 +1,37 @@
+<!-- 첫 번째 화면 -->
+<div id="info">
+    <p>전하의 개수를 입력하세요 (1~10):</p>
+    <input type="number" id="chargeCount" min="1" max="10">
+    <button id="confirmButton">완료</button>
+  </div>
+  
+  <!-- 두 번째 화면 -->
+  <div id="simulation" class="hidden">
+    <div id="chargeArea">
+      <div id="horizontalLine"></div> <!-- 수평선 -->
+    </div>
+  
+    <!-- 전하 수정 모달 -->
+    <div id="chargeModal" class="hidden">
+      <label for="chargeAmount">전하량:</label>
+      <input type="number" id="chargeAmount">
+      <button id="nextCharge">다음</button>
+      <div>
+        <label for="chargeType">전하 타입:</label>
+        <select id="chargeType">
+          <option value="positive">양전하</option>
+          <option value="negative">음전하</option>
+        </select>
+        <button id="saveCharge">저장</button>
+      </div>
+    </div>
+  
+    <!-- 완료 버튼 -->
+    <button id="completeButton">완료</button>
+  </div>
+  
+  <!-- 힘의 방향을 표시하는 영역 -->
+  <div id="forceArea" class="hidden">
+    <p>전하들의 알짜힘과 방향이 나타납니다.</p>
+  </div>
+  
